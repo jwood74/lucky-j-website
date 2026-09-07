@@ -322,6 +322,83 @@ button {
   text-align: right;
 }
 
+.news {
+  background: var(--paper-dark);
+  display: grid;
+  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: 0.55fr 1.45fr;
+  padding: clamp(5rem, 8vw, 8rem) 4vw;
+}
+
+.news h2 {
+  font-family: var(--display);
+  font-size: clamp(3.5rem, 7vw, 8rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+}
+
+.news-story {
+  border-top: 1px solid var(--line);
+  max-width: 900px;
+  padding-top: 1.5rem;
+}
+
+.news-meta {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.news-logo {
+  border-radius: 0;
+  height: auto;
+  max-width: 100%;
+  width: 140px;
+}
+
+.quote-lead {
+  display: block;
+}
+
+.quote-finish {
+  align-items: end;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) 140px;
+}
+
+.news-story h3 {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 2.3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1.2rem 0 1.5rem;
+  max-width: 52ch;
+}
+
+.news-story blockquote {
+  background: #d7d5cf;
+  border-radius: 20px;
+  font-family: var(--sans);
+  font-size: clamp(1.25rem, 1.9vw, 2.1rem);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 2.5rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.news-story cite {
+  font-style: italic;
+}
+
+.news .text-link {
+  color: var(--sunset);
+}
+
 .about {
   align-items: center;
   display: grid;
@@ -473,13 +550,15 @@ button {
   }
 
   .section-pad,
-  .awards {
+  .awards,
+  .news {
     padding-left: 1.4rem;
     padding-right: 1.4rem;
   }
 
   .section-heading,
   .awards,
+  .news,
   .about {
     align-items: start;
     gap: 3rem;
@@ -534,6 +613,15 @@ button {
   .project-card-link {
     font-size: 0.58rem;
     padding: 0.65rem 0.8rem;
+  }
+
+  .quote-finish {
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr) 110px;
+  }
+
+  .news-logo {
+    width: 110px;
   }
 
   .award-list li {
